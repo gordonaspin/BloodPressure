@@ -1,17 +1,22 @@
-//
-//  BloodPressureApp.swift
-//  BloodPressure
-//
-//  Created by Gordon Aspin on 5/29/25.
-//
-
 import SwiftUI
 
 @main
 struct BloodPressureApp: App {
+    @StateObject private var healthStore = HealthStore()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                DataEntryView()
+                    .tabItem {
+                        Label("Data", systemImage: "heart.text.square")
+                    }
+                HistoricalDataView()
+                    .tabItem {
+                        Label("History", systemImage: "chart.bar")
+                    }
+            }
+            .environmentObject(healthStore)
         }
     }
 }
