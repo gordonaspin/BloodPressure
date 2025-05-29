@@ -20,107 +20,104 @@ struct HistoricalDataView: View {
     ]
     
     var body: some View {
-        NavigationView {
-            VStack {
-                Picker("Select Period", selection: $selectedPeriod) {
-                    ForEach(periods.sorted { $0.value < $1.value }, id: \.key) { Text($0.key) }
-                }
-                .pickerStyle(MenuPickerStyle())
-                .padding()
-                
-                Text("Blood Pressure")
-                if !healthStore.bloodPressureData.isEmpty {
-                    Chart {
-                        ForEach(healthStore.bloodPressureData, id: \.0.startDate) { (systolic, diastolic) in
-                            let sys = systolic.quantity.doubleValue(for: .millimeterOfMercury())
-                            let dia = diastolic.quantity.doubleValue(for: .millimeterOfMercury())
-                            let pointColor: Color = (sys >= 140 || dia >= 90) ? .red : (sys >= 120 || dia >= 80) ? .orange : .green
-
-                            LineMark(
-                                x: .value("Date", systolic.startDate),
-                                y: .value("Systolic", sys),
-                                series: .value("Systolic", "S")
-                            )
-                            .foregroundStyle(.gray)
-
-                            PointMark(
-                                x: .value("Date", systolic.startDate),
-                                y: .value("Systolic", sys)
-                            )
-                            .foregroundStyle(pointColor)
-                            .symbol(by: .value("Type", "Systolic"))
-                        }
-
-                        ForEach(healthStore.bloodPressureData, id: \.0.startDate) { (systolic, diastolic) in
-                            let sys = systolic.quantity.doubleValue(for: .millimeterOfMercury())
-                            let dia = diastolic.quantity.doubleValue(for: .millimeterOfMercury())
-                            let pointColor: Color = (sys >= 140 || dia >= 90) ? .red : (sys >= 120 || dia >= 80) ? .orange : .green
-
-                            LineMark(
-                                x: .value("Date", diastolic.startDate),
-                                y: .value("Diastolic", dia),
-                                series: .value("Diastolic", "D")
-                            )
-                            .foregroundStyle(.gray)
-
-                            PointMark(
-                                x: .value("Date", diastolic.startDate),
-                                y: .value("Diastolic", dia)
-                            )
-                            .foregroundStyle(pointColor)
-                            .symbol(by: .value("Type", "Diastolic"))
-                        }
-
-                        ForEach(healthStore.bloodPressureData, id: \.0.startDate) { (systolic, diastolic) in
-                            let sys = systolic.quantity.doubleValue(for: .millimeterOfMercury())
-                            let dia = diastolic.quantity.doubleValue(for: .millimeterOfMercury())
-                            let map = healthStore.meanArterialPressure(systolic: sys, diastolic: dia)
-                            let pointColor: Color = (map >= 110 || map <= 60) ? .red : (map >= 100 || map <= 70) ? .orange : .green
-
-                            LineMark(
-                                x: .value("Date", systolic.startDate),
-                                y: .value("MAP", map),
-                                series: .value("MAP", "M")
-                            )
-                            .foregroundStyle(.gray)
-
-                            PointMark(
-                                x: .value("Date", systolic.startDate),
-                                y: .value("MAP", map)
-                            )
-                            .foregroundStyle(pointColor)
-                            .symbol(by: .value("Type", "MAP"))
-                        }
-                    }
-                    .chartYScale(domain: [healthStore.minDiastolic - 5, healthStore.maxSystolic + 5])
-                    .padding()
-                }
-                else {
-                    Text("No blood pressure data available")
-                }
-                
-                Text("Heart Rate")
-                if !healthStore.heartRateData.isEmpty {
-                    Chart(healthStore.heartRateData, id: \.self) { sample in
+        VStack {
+            Picker("Select Period", selection: $selectedPeriod) {
+                ForEach(periods.sorted { $0.value < $1.value }, id: \.key) { Text($0.key) }
+            }
+            .pickerStyle(MenuPickerStyle())
+            .padding()
+            
+            Text("Blood Pressure")
+            if !healthStore.bloodPressureData.isEmpty {
+                Chart {
+                    ForEach(healthStore.bloodPressureData, id: \.0.startDate) { (systolic, diastolic) in
+                        let sys = systolic.quantity.doubleValue(for: .millimeterOfMercury())
+                        let dia = diastolic.quantity.doubleValue(for: .millimeterOfMercury())
+                        let pointColor: Color = (sys >= 140 || dia >= 90) ? .red : (sys >= 120 || dia >= 80) ? .orange : .green
+                        
                         LineMark(
-                            x: .value("Date", sample.startDate),
-                            y: .value("BPM", sample.quantity.doubleValue(for: .init(from: "count/min")))
+                            x: .value("Date", systolic.startDate),
+                            y: .value("Systolic", sys),
+                            series: .value("Systolic", "S")
                         )
+                        .foregroundStyle(.gray)
+                        
+                        PointMark(
+                            x: .value("Date", systolic.startDate),
+                            y: .value("Systolic", sys)
+                        )
+                        .foregroundStyle(pointColor)
+                        .symbol(by: .value("Type", "Systolic"))
                     }
-                    .chartYScale(domain: [healthStore.minHeartRate - 5, healthStore.maxHeartRate + 5])
-                    .padding()
+                    
+                    ForEach(healthStore.bloodPressureData, id: \.0.startDate) { (systolic, diastolic) in
+                        let sys = systolic.quantity.doubleValue(for: .millimeterOfMercury())
+                        let dia = diastolic.quantity.doubleValue(for: .millimeterOfMercury())
+                        let pointColor: Color = (sys >= 140 || dia >= 90) ? .red : (sys >= 120 || dia >= 80) ? .orange : .green
+                        
+                        LineMark(
+                            x: .value("Date", diastolic.startDate),
+                            y: .value("Diastolic", dia),
+                            series: .value("Diastolic", "D")
+                        )
+                        .foregroundStyle(.gray)
+                        
+                        PointMark(
+                            x: .value("Date", diastolic.startDate),
+                            y: .value("Diastolic", dia)
+                        )
+                        .foregroundStyle(pointColor)
+                        .symbol(by: .value("Type", "Diastolic"))
+                    }
+                    
+                    ForEach(healthStore.bloodPressureData, id: \.0.startDate) { (systolic, diastolic) in
+                        let sys = systolic.quantity.doubleValue(for: .millimeterOfMercury())
+                        let dia = diastolic.quantity.doubleValue(for: .millimeterOfMercury())
+                        let map = healthStore.meanArterialPressure(systolic: sys, diastolic: dia)
+                        let pointColor: Color = (map >= 110 || map <= 60) ? .red : (map >= 100 || map <= 70) ? .orange : .green
+                        
+                        LineMark(
+                            x: .value("Date", systolic.startDate),
+                            y: .value("MAP", map),
+                            series: .value("MAP", "M")
+                        )
+                        .foregroundStyle(.gray)
+                        
+                        PointMark(
+                            x: .value("Date", systolic.startDate),
+                            y: .value("MAP", map)
+                        )
+                        .foregroundStyle(pointColor)
+                        .symbol(by: .value("Type", "MAP"))
+                    }
                 }
-                else {
-                    Text("No heart rate data available")
+                .chartYScale(domain: [healthStore.minDiastolic - 5, healthStore.maxSystolic + 5])
+                .padding()
+            }
+            else {
+                Text("No blood pressure data available")
+            }
+            
+            Text("Heart Rate")
+            if !healthStore.heartRateData.isEmpty {
+                Chart(healthStore.heartRateData, id: \.self) { sample in
+                    LineMark(
+                        x: .value("Date", sample.startDate),
+                        y: .value("BPM", sample.quantity.doubleValue(for: .init(from: "count/min")))
+                    )
                 }
+                .chartYScale(domain: [healthStore.minHeartRate - 5, healthStore.maxHeartRate + 5])
+                .padding()
             }
-            .onChange(of: selectedPeriod) {
-                loadData()
+            else {
+                Text("No heart rate data available")
             }
-            .onAppear() {
-                loadData()
-            }
-            //.navigationTitle("Historical Data")
+        }
+        .onChange(of: selectedPeriod) {
+            loadData()
+        }
+        .onAppear() {
+            loadData()
         }
     }
     private func loadData() {

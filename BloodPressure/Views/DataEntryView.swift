@@ -8,7 +8,7 @@ struct DataEntryView: View {
     @State private var selectedDate = Date()
 
     var body: some View {
-        NavigationView {
+        //NavigationView {
             Form {
                 Section(header: Text("Blood Pressure (mmHg)")) {
                     TextField("Systolic (top number)", text: $systolic)
@@ -34,8 +34,15 @@ struct DataEntryView: View {
                         healthStore.saveHeartRate(bpm, date: selectedDate)
                     }
                 }
-            }
-            .navigationTitle("Enter Data")
+            //}
+            //.navigationTitle("Enter Data")
         }
     }
+}
+
+#Preview {
+    var healthStore = HealthStore()
+
+    DataEntryView()
+        .environmentObject(healthStore)
 }
