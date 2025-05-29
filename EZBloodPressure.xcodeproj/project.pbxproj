@@ -24,9 +24,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F858029D2DE8A55100F9BF65 /* BloodPressure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BloodPressure.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F85802AD2DE8A55200F9BF65 /* BloodPressureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BloodPressureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F85802B72DE8A55200F9BF65 /* BloodPressureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BloodPressureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F858029D2DE8A55100F9BF65 /* EZBloodPressure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZBloodPressure.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F85802AD2DE8A55200F9BF65 /* EZBloodPressureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EZBloodPressureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F85802B72DE8A55200F9BF65 /* EZBloodPressureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EZBloodPressureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -85,9 +85,9 @@
 		F858029E2DE8A55100F9BF65 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F858029D2DE8A55100F9BF65 /* BloodPressure.app */,
-				F85802AD2DE8A55200F9BF65 /* BloodPressureTests.xctest */,
-				F85802B72DE8A55200F9BF65 /* BloodPressureUITests.xctest */,
+				F858029D2DE8A55100F9BF65 /* EZBloodPressure.app */,
+				F85802AD2DE8A55200F9BF65 /* EZBloodPressureTests.xctest */,
+				F85802B72DE8A55200F9BF65 /* EZBloodPressureUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +95,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F858029C2DE8A55100F9BF65 /* BloodPressure */ = {
+		F858029C2DE8A55100F9BF65 /* EZBloodPressure */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F85802C12DE8A55200F9BF65 /* Build configuration list for PBXNativeTarget "BloodPressure" */;
+			buildConfigurationList = F85802C12DE8A55200F9BF65 /* Build configuration list for PBXNativeTarget "EZBloodPressure" */;
 			buildPhases = (
 				F85802992DE8A55100F9BF65 /* Sources */,
 				F858029A2DE8A55100F9BF65 /* Frameworks */,
@@ -110,16 +110,16 @@
 			fileSystemSynchronizedGroups = (
 				F858029F2DE8A55100F9BF65 /* BloodPressure */,
 			);
-			name = BloodPressure;
+			name = EZBloodPressure;
 			packageProductDependencies = (
 			);
 			productName = BloodPressure;
-			productReference = F858029D2DE8A55100F9BF65 /* BloodPressure.app */;
+			productReference = F858029D2DE8A55100F9BF65 /* EZBloodPressure.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F85802AC2DE8A55200F9BF65 /* BloodPressureTests */ = {
+		F85802AC2DE8A55200F9BF65 /* EZBloodPressureTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F85802C42DE8A55200F9BF65 /* Build configuration list for PBXNativeTarget "BloodPressureTests" */;
+			buildConfigurationList = F85802C42DE8A55200F9BF65 /* Build configuration list for PBXNativeTarget "EZBloodPressureTests" */;
 			buildPhases = (
 				F85802A92DE8A55200F9BF65 /* Sources */,
 				F85802AA2DE8A55200F9BF65 /* Frameworks */,
@@ -133,16 +133,16 @@
 			fileSystemSynchronizedGroups = (
 				F85802B02DE8A55200F9BF65 /* BloodPressureTests */,
 			);
-			name = BloodPressureTests;
+			name = EZBloodPressureTests;
 			packageProductDependencies = (
 			);
 			productName = BloodPressureTests;
-			productReference = F85802AD2DE8A55200F9BF65 /* BloodPressureTests.xctest */;
+			productReference = F85802AD2DE8A55200F9BF65 /* EZBloodPressureTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F85802B62DE8A55200F9BF65 /* BloodPressureUITests */ = {
+		F85802B62DE8A55200F9BF65 /* EZBloodPressureUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F85802C72DE8A55200F9BF65 /* Build configuration list for PBXNativeTarget "BloodPressureUITests" */;
+			buildConfigurationList = F85802C72DE8A55200F9BF65 /* Build configuration list for PBXNativeTarget "EZBloodPressureUITests" */;
 			buildPhases = (
 				F85802B32DE8A55200F9BF65 /* Sources */,
 				F85802B42DE8A55200F9BF65 /* Frameworks */,
@@ -156,11 +156,11 @@
 			fileSystemSynchronizedGroups = (
 				F85802BA2DE8A55200F9BF65 /* BloodPressureUITests */,
 			);
-			name = BloodPressureUITests;
+			name = EZBloodPressureUITests;
 			packageProductDependencies = (
 			);
 			productName = BloodPressureUITests;
-			productReference = F85802B72DE8A55200F9BF65 /* BloodPressureUITests.xctest */;
+			productReference = F85802B72DE8A55200F9BF65 /* EZBloodPressureUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -186,7 +186,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F85802982DE8A55100F9BF65 /* Build configuration list for PBXProject "BloodPressure" */;
+			buildConfigurationList = F85802982DE8A55100F9BF65 /* Build configuration list for PBXProject "EZBloodPressure" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -200,9 +200,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F858029C2DE8A55100F9BF65 /* BloodPressure */,
-				F85802AC2DE8A55200F9BF65 /* BloodPressureTests */,
-				F85802B62DE8A55200F9BF65 /* BloodPressureUITests */,
+				F858029C2DE8A55100F9BF65 /* EZBloodPressure */,
+				F85802AC2DE8A55200F9BF65 /* EZBloodPressureTests */,
+				F85802B62DE8A55200F9BF65 /* EZBloodPressureUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,12 +258,12 @@
 /* Begin PBXTargetDependency section */
 		F85802AF2DE8A55200F9BF65 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F858029C2DE8A55100F9BF65 /* BloodPressure */;
+			target = F858029C2DE8A55100F9BF65 /* EZBloodPressure */;
 			targetProxy = F85802AE2DE8A55200F9BF65 /* PBXContainerItemProxy */;
 		};
 		F85802B92DE8A55200F9BF65 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F858029C2DE8A55100F9BF65 /* BloodPressure */;
+			target = F858029C2DE8A55100F9BF65 /* EZBloodPressure */;
 			targetProxy = F85802B82DE8A55200F9BF65 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -413,7 +413,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.aspin.BloodPressure;
+				PRODUCT_BUNDLE_IDENTIFIER = org.aspin.EZBloodPressure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -446,7 +446,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.aspin.BloodPressure;
+				PRODUCT_BUNDLE_IDENTIFIER = org.aspin.EZBloodPressure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -469,7 +469,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BloodPressure.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BloodPressure";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EZBloodPressure.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EZBloodPressure";
 			};
 			name = Debug;
 		};
@@ -488,7 +488,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BloodPressure.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BloodPressure";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EZBloodPressure.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EZBloodPressure";
 			};
 			name = Release;
 		};
@@ -529,7 +529,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F85802982DE8A55100F9BF65 /* Build configuration list for PBXProject "BloodPressure" */ = {
+		F85802982DE8A55100F9BF65 /* Build configuration list for PBXProject "EZBloodPressure" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F85802BF2DE8A55200F9BF65 /* Debug */,
@@ -538,7 +538,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F85802C12DE8A55200F9BF65 /* Build configuration list for PBXNativeTarget "BloodPressure" */ = {
+		F85802C12DE8A55200F9BF65 /* Build configuration list for PBXNativeTarget "EZBloodPressure" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F85802C22DE8A55200F9BF65 /* Debug */,
@@ -547,7 +547,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F85802C42DE8A55200F9BF65 /* Build configuration list for PBXNativeTarget "BloodPressureTests" */ = {
+		F85802C42DE8A55200F9BF65 /* Build configuration list for PBXNativeTarget "EZBloodPressureTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F85802C52DE8A55200F9BF65 /* Debug */,
@@ -556,7 +556,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F85802C72DE8A55200F9BF65 /* Build configuration list for PBXNativeTarget "BloodPressureUITests" */ = {
+		F85802C72DE8A55200F9BF65 /* Build configuration list for PBXNativeTarget "EZBloodPressureUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F85802C82DE8A55200F9BF65 /* Debug */,
