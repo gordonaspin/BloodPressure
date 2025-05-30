@@ -27,6 +27,7 @@
 		F858029D2DE8A55100F9BF65 /* EZBloodPressure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZBloodPressure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F85802AD2DE8A55200F9BF65 /* EZBloodPressureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EZBloodPressureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F85802B72DE8A55200F9BF65 /* EZBloodPressureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EZBloodPressureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8D085D62DEA036C00CD137B /* EZBloodPressure-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "EZBloodPressure-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +76,7 @@
 		F85802942DE8A55100F9BF65 = {
 			isa = PBXGroup;
 			children = (
+				F8D085D62DEA036C00CD137B /* EZBloodPressure-Info.plist */,
 				F858029F2DE8A55100F9BF65 /* BloodPressure */,
 				F85802B02DE8A55200F9BF65 /* BloodPressureTests */,
 				F85802BA2DE8A55200F9BF65 /* BloodPressureUITests */,
@@ -398,11 +400,13 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = BloodPressure/BloodPressure.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"BloodPressure/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "EZBloodPressure-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Blood Pressure";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "BloodPressureApp reads and updates blood pressure information in HealthKit";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "BloodPressureApp reads and updates blood pressure information in HealthKit";
@@ -432,11 +436,13 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = BloodPressure/BloodPressure.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"BloodPressure/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "EZBloodPressure-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Blood Pressure";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "BloodPressureApp reads and updates blood pressure information in HealthKit";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "BloodPressureApp reads and updates blood pressure information in HealthKit";
