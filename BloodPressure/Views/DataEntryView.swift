@@ -6,7 +6,7 @@ struct DataEntryView: View {
     @State private var diastolic: String = ""
     @State private var heartRate: String = ""
     @State private var selectedDate = Date()
-    @State private var savedAlert = false
+    @State private var showAlert = false
 
     private enum Field: Int, CaseIterable {
         case systolic
@@ -40,9 +40,16 @@ struct DataEntryView: View {
             Button("Save") {
                 if let sys = Double(systolic), let dia = Double(diastolic) {
                     healthStore.saveBloodPressure(systolic: sys, diastolic: dia, date: selectedDate)
+                    showAlert = true
                 }
                 if let bpm = Double(heartRate) {
                     healthStore.saveHeartRate(bpm, date: selectedDate)
+                    showAlert = true
+                }
+            }
+            .alert("Data saved", isPresented:$showAlert) {
+                Button("OK") {
+                    showAlert = false
                 }
             }
         }
